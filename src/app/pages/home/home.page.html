@@ -1,10 +1,3 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      ALARMA
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content class="ion-padding">
   <div class="home">
@@ -14,17 +7,17 @@
         <ion-button
           class="full-screen-button"
           expand="block"
-          [color]="alarmOnOff ? 'danger' : 'success'"
+          [color]="alarmOnOff ? 'danger' : 'dark'"
           (click)="cambiarAlarma()"
         >
-        <img [src]="alarmOnOff ? '../../assets/lock.png' : '../../assets/unlock.png'" alt="">
+        <img [src]="alarmOnOff ? '../../assets/images/lock.png' : '../../assets/images/unlock.png'" height="500" width="400" alt="">
         </ion-button>
       </ion-col>
     </ion-row>
 
     <ion-fab slot="fixed" vertical="top" horizontal="start" *ngIf="alarmOnOff === false">
-      <ion-fab-button color="danger" (click)="cerrarSesion()">
-        <ion-icon name="power-sharp" size="large"></ion-icon>
+      <ion-fab-button color="light" (click)="cerrarSesion()">
+        <ion-icon color="dark" name="log-out-outline" size="large"></ion-icon>
       </ion-fab-button>
     </ion-fab>
   </div>

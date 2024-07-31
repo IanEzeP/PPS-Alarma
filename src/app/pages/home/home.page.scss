@@ -1,37 +1,10 @@
 .full-screen-button {
+//  height: 100%;
   height: 93vh; /* Set height to 100% of viewport height */
+
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
 }
 
 div.home {
@@ -41,9 +14,9 @@ div.home {
 
 ion-content {
   --overflow: hidden;
-  --background: rgb(0, 88, 104);
+  --background: rgb(104, 0, 0);
 }
-
+/*
 ion-button {
   display: block;
   height: 48%;
@@ -54,7 +27,7 @@ ion-button {
   margin-top: 3%;
   font-size: 2rem;
   font-weight: 600;
-}
+}*/
 .claseA {
   --background: linear-gradient(#1F9833, #09814A);
 }

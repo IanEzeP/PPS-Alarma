@@ -34,11 +34,11 @@ export class HomePage implements OnInit {
   accelerationY: any;
   accelerationZ: any;
 
-  audioIzquierda = '../../assets/audios/quemetocas.mp3';
-  audioDerecha = '../../assets/audios/estanchoriando.mp3';
-  audioVertical = '../../assets/audios/bajaeltelefono.mp3';
-  audioHorizontal = '../../assets/audios/epa.mp3';
-  audioError = '../../assets/audios/lacontrasenia.mp3';
+  audioIzquierda = '../../assets/audios/todosladrones.mp3';
+  audioDerecha = '../../assets/audios/soltame.mp3';
+  audioVertical = '../../assets/audios/dejameenmilugar.mp3';
+  audioHorizontal = '../../assets/audios/alerta.mp3';
+  audioError = '../../assets/audios/contraseniamal.mp3';
 
   audioSource = new Audio();
 
@@ -50,7 +50,6 @@ export class HomePage implements OnInit {
   cambiarAlarma() {
     if (this.alarmOnOff === true) {
       this.checkPassword();
-      //this.alarmOnOff = false;
     }
     else {
       this.alarmOnOff = true;
@@ -69,22 +68,21 @@ export class HomePage implements OnInit {
       this.accelerationX = Math.floor(acceleration.x);
       this.accelerationY = Math.floor(acceleration.y);
       this.accelerationZ = Math.floor(acceleration.z);
-
-      console.log(`Acelerómetro: X: ${this.accelerationX} Y: ${this.accelerationY} Z: ${this.accelerationZ}`);
+      //console.log(`Acelerómetro: X: ${this.accelerationX} Y: ${this.accelerationY} Z: ${this.accelerationZ}`);
 
       if (acceleration.x > 5) {
-        //Inclinacion Izquierda
+        //lado izquierdo
         this.posicionActualCelular = 'izquierda';
         this.movimientoIzquierda();
       }
       else if (acceleration.x < -5) {
-        //Inclinacion Derecha
+        //lado derecho
 
         this.posicionActualCelular = 'derecha';
         this.movimientoDerecha();
       }
       else if (acceleration.y >= 9) {
-        //encender flash por 5 segundos y sonido
+        //parado encender flash por 5 segundos y sonido
         this.posicionActualCelular = 'arriba';
         
         if ((this.posicionActualCelular !== this.posicionAnteriorCelular)) {
@@ -100,9 +98,6 @@ export class HomePage implements OnInit {
         this.posicionActualCelular = 'plano';
         this.movimientoHorizontal();
       }
-
-      //console.log(this.posicionActualCelular);
-
     });
   }
 
@@ -174,8 +169,10 @@ export class HomePage implements OnInit {
       inputPlaceholder: 'Ingresa la clave',
       heightAuto: false
     });
+
     this.clave = password;
-    if (this.clave === this.auth.loggedUser.clave) {//Comparacion de usuario registrado con la clave ingresada recientemente
+
+    if (this.clave === this.auth.loggedUser.clave.toString()) {//Comparacion de usuario registrado con la clave ingresada recientemente
       console.log('ENTRE');
       this.estado = 'permitido';
       this.alarmOnOff = false;
@@ -185,6 +182,7 @@ export class HomePage implements OnInit {
       this.parar(); ///Paro la subscripcion al acceleration
     }
     else if (this.clave !== '') {
+      console.log('Error contrasenia');
       this.estado = 'denegado';
       this.errorApagado();
       setTimeout(() => {
