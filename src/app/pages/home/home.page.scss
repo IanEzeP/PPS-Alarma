@@ -1,0 +1,56 @@
+
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+div.home {
+  height: 100%;
+  width: 100%;
+}
+
+ion-content {
+  --overflow: hidden;
+  --background: rgb(0, 88, 104);
+}
+
+ion-button {
+  display: block;
+  height: 48%;
+  text-transform: initial;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 3%;
+  margin-top: 3%;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.claseA {
+  --background: linear-gradient(#1F9833, #09814A);
+}
+.claseB {
+  --background: linear-gradient(#FF6C32, #BC412B);
+}

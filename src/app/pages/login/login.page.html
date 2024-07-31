@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="container">
+
+    <img src="../../../assets/icon.png" alt="Logo" style="max-width: 50%; max-height: 50%; margin: auto;
+    display: block; margin-top: 40px;">
+
+    <h1>ALARMA</h1>
+    
+    <div *ngIf="this.cargaFin == true; then mostrar else esperar"></div>
+
+    <ng-template #mostrar>
+      <ion-fab vertical="bottom">
+        <ion-fab-button>
+          <ion-icon name="person-outline" size="large"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list style="margin-left: -45px;" side="top">
+          <ion-button class="users" shape="round" *ngFor="let item of arrayTestUsers" (click)="fastLogin(item.correo, item.clave)">
+            <ion-icon name="person"></ion-icon>&nbsp;
+            <ion-label>{{ item.perfil }}</ion-label>
+          </ion-button>
+        </ion-fab-list>
+      </ion-fab>
+    </ng-template>
+
+    <ng-template #esperar>
+      <ion-fab vertical="bottom">
+        <ion-fab-button>
+          <ion-icon name="person-outline" size="large"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </ng-template>
+
+    <form class="needs-validation" [formGroup]="formLog">
+      <ion-input fill="outline" shape="round" label="Correo:" labelPlacement="stacked" type="email"  formControlName="email"></ion-input>
+      <ion-input fill="outline" shape="round" label="Clave:" type="password" labelPlacement="stacked" formControlName="password"></ion-input>
+      <ion-button class="login" (click)="this.iniciarSesion()">Ingresar</ion-button>
+    </form>
+
+  </div>
+</ion-content>
