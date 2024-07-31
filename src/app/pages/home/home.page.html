@@ -8,9 +8,6 @@
 
 <ion-content class="ion-padding">
   <div class="home">
-    <ion-fab slot="fixed" vertical="top" horizontal="center" *ngIf="alarmOnOff === false">
-    
-    </ion-fab>
   
     <ion-row>
       <ion-col>
@@ -20,12 +17,15 @@
           [color]="alarmOnOff ? 'danger' : 'success'"
           (click)="cambiarAlarma()"
         >
+        <img [src]="alarmOnOff ? '../../assets/lock.png' : '../../assets/unlock.png'" alt="">
         </ion-button>
       </ion-col>
     </ion-row>
 
-    <ion-fab slot="fixed" vertical="bottom" horizontal="start">
-      <ion-fab-button color="danger" (click)="cerraSesion()"><ion-icon name="power-sharp" size="large"></ion-icon></ion-fab-button>
+    <ion-fab slot="fixed" vertical="top" horizontal="start" *ngIf="alarmOnOff === false">
+      <ion-fab-button color="danger" (click)="cerrarSesion()">
+        <ion-icon name="power-sharp" size="large"></ion-icon>
+      </ion-fab-button>
     </ion-fab>
   </div>
   
