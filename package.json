@@ -29,6 +29,7 @@
     "@capacitor/core": "6.1.0",
     "@capacitor/haptics": "6.0.0",
     "@capacitor/keyboard": "^6.0.1",
+    "@capacitor/splash-screen": "^6.0.1",
     "@capacitor/status-bar": "6.0.0",
     "@ionic-native/core": "^5.36.0",
     "@ionic-native/device-motion": "^5.36.0",

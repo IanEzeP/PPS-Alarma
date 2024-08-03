@@ -1,64 +1,63 @@
 
 ion-content {
-    --background: linear-gradient(#a5ee15, #33e7ba);
+    --background: url(../../../assets/wallpapers/dark_mesh.jpg);
 }
 
 div.container {
-    height: 90%;
-    width: 90%;
-    margin-top: 5%;
-    margin-left: 5%;
-
-    border: 5px solid rgb(0, 88, 104);
-    border-radius: 10px;
+    height: 98%;
+    width: 94%;
+    margin-top: 2%;
+    margin-left: 3%;
+    background-color: #ffffffd0;
     --overflow: hidden;
-
+    border: 3px solid #ffffff;
+    border-radius: 3px;
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 600;
-    margin-top: 20px;
-    margin-left: 10%;
-    margin-bottom: -15px;
+    margin-top: 55px;
+    margin-left: 20px;
+    margin-bottom: 60px;
 }
 
 ion-input {
-    margin-top: 45px;
-    margin-left: 10px;
-    font-size: 24px;
+    width: 98%;
+    margin-left: 1%;
+    bottom: 1rem;
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    margin-top: 1.4rem;
+    color: #1d1d1d;
+    --background: #feffea;
 
-    width: 94%;
+    border: 2px solid #1d1d1d;
+    border-radius: 2px;
+}
 
-    --border-width: 3px;
-    color: var(--ion-color-dark);
-    --highlight-color-valid: var(--ion-color-tertiary);
+ion-select {
+    width: 98%;
+    margin-left: 1%;
+    bottom: -1rem;
+    font-size: 21px;
+    font-weight: 600;
+    color: #fefefa;
+    --background: #1d1d1d;
+
+    
+    border: 3px solid #1d1d1d;
+    border-radius: 2px;
 }
 
 ion-button.login {
-    text-transform: initial;
-    --background: rgb(211, 143, 6);
+    --background: #3b1153;
+    color: #feffea;
     margin-top: 60px;
-    margin-left: 23px;
-    height: 100px;
-    width: 320px;
+    height: 70px;
+    width: 100%;
 
     font-weight: 600;
-    font-size: 30px;
-}
-
-ion-button.users {
-    --background: rgb(0, 88, 104);
-    text-transform: initial;
-    margin-bottom: 7px;
-    margin-left: 160px;
-}
-
-ion-fab-button {
-    --background: rgb(0, 88, 104);
-    margin-left: 154px;
-}
-
-ion-fab-list {
-    margin-bottom: 54px;
+    font-size: 20px;
 }

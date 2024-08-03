@@ -112,9 +112,9 @@ export class LoginPage implements OnInit, OnDestroy {
     }
   }
 
-  fastLogin(email: string, clave: number) {
-    this.formLog.controls['email'].setValue(email);
-    this.formLog.controls['password'].setValue(clave);
+  onQuickUser(user: any) {
+    this.formLog.controls['email'].setValue(user.target.value.correo);
+    this.formLog.controls['password'].setValue(user.target.value.clave);
   }
 
   cleanInputs() {
